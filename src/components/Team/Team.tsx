@@ -11,7 +11,7 @@ export default function Team() {
             Valores das Sócias Fundadoras
           </h2>
         </div>
-        <div className="container mx-auto  grid grid-cols-1 md:grid-cols-2 mt-10 ">
+        <div className="text-white container mx-auto  grid grid-cols-1 md:grid-cols-2 mt-10 ">
           <div className="bg-midnight-green px-12 py-12 xl:px-48 xl:py-24">
             <p>
               Praticidade – Acreditamos que o Direito deve ser um meio e não um
