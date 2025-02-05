@@ -1,6 +1,7 @@
 "use client";
 import bridgeImage from "@/assets/bridge.jpg";
 import { useState } from "react";
+import AnimatedSection from "../animations/AnimatedSection";
 
 const faqData = [
   {
@@ -41,7 +42,7 @@ export default function FAQ() {
 
   return (
     <section
-      className="relative py-24 bg-cover bg-no-repeat bg-fixed"
+      className="relative py-24 bg-cover bg-no-repeat lg:bg-fixed"
       style={{ backgroundImage: `url(${bridgeImage.src})` }}
     >
       {/* Overlay */}
@@ -49,48 +50,50 @@ export default function FAQ() {
 
       <div className="relative z-20 mx-auto container px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center gap-x-16 gap-y-5 xl:gap-28 lg:flex-row lg:justify-between max-lg:max-w-2xl mx-auto max-w-full">
-          <div className="w-full lg:w-1/2">
-            <div className="lg:max-w-5xl">
-              <div className="mb-6 lg:mb-16">
-                <h2 className="text-4xl  font-bold text-white leading-[3.25rem] mb-5 lg:text-left">
-                  Perguntas Frequentes
-                </h2>
-              </div>
-              <div className="accordion-group">
-                {faqData.map((faq, index) => (
-                  <div key={index} className="border-b border-gray-200 py-8 ">
-                    <button
-                      className="flex text-left justify-between w-full text-xl text-white font-semibold "
-                      onClick={() => toggleFAQ(index)}
-                    >
-                      {faq.question}
-                      <svg
-                        className={`w-5 h-5 transition-transform ${
-                          openIndex === index ? "rotate-180" : ""
-                        }`}
-                        viewBox="0 0 22 22"
-                        fill="none"
-                        xmlns="http://www.w3.org/2000/svg"
+          <AnimatedSection>
+            <div className="w-full ">
+              <div className="lg:max-w-5xl">
+                <div className="mb-6 lg:mb-16">
+                  <h2 className="text-4xl  font-bold text-white leading-[3.25rem] mb-5 lg:text-left">
+                    Perguntas Frequentes
+                  </h2>
+                </div>
+                <div className="accordion-group">
+                  {faqData.map((faq, index) => (
+                    <div key={index} className="border-b border-gray-200 py-8 ">
+                      <button
+                        className="flex text-left justify-between w-full text-xl text-white font-semibold "
+                        onClick={() => toggleFAQ(index)}
                       >
-                        <path
-                          d="M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25"
-                          stroke="currentColor"
-                          strokeWidth="1.6"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                    </button>
-                    {openIndex === index && (
-                      <p className="mt-2 text-white text-base">
-                        {faq.answer}
-                      </p>
-                    )}
-                  </div>
-                ))}
+                        {faq.question}
+                        <svg
+                          className={`w-5 h-5 transition-transform ${
+                            openIndex === index ? "rotate-180" : ""
+                          }`}
+                          viewBox="0 0 22 22"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M16.5 8.25L12.4142 12.3358C11.7475 13.0025 11.4142 13.3358 11 13.3358C10.5858 13.3358 10.2525 13.0025 9.58579 12.3358L5.5 8.25"
+                            stroke="currentColor"
+                            strokeWidth="1.6"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </button>
+                      {openIndex === index && (
+                        <p className="mt-2 text-white text-base">
+                          {faq.answer}
+                        </p>
+                      )}
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
+          </AnimatedSection>
         </div>
       </div>
     </section>

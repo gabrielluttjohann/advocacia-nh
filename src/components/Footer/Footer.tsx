@@ -3,31 +3,17 @@ import Link from "next/link";
 
 // components/Footer.js
 const Footer = () => {
-  const footerLinks = [
-    { name: "Política de Privacidade", url: "#" },
-    { name: "Termos de Serviço", url: "#" },
-    { name: "Contato", url: "#" },
-  ];
-
   return (
     <footer className="bg-midnight-green  text-white py-8">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
-        {/* Logo da empresa */}
-        <div className="flex justify-center md:justify-start">
-          <img src={logo.src} alt="Logo da Empresa" className="h-12" />
-        </div>
-
-        {/* Links */}
-        <div className="">
-          {footerLinks.map((link) => (
-            <Link
-              key={link.name}
-              href={link.url}
-              className="px-3 text-white hover:text-gray-400"
-            >
-              {link.name}
-            </Link>
-          ))}
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between">
+        <div className="flex justify-center md:justify-start ">
+          <Link href="/">
+            <img
+              src={logo.src}
+              alt="Logo da Empresa"
+              className="h-12 transform transition duration-300 ease-in-out hover:scale-110"
+            />
+          </Link>
         </div>
 
         {/* Direitos autorais */}
