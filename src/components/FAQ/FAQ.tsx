@@ -39,9 +39,14 @@ export default function FAQ() {
   };
 
   return (
-    <section className="bg-midnight-green py-24">
-      <div className="mx-auto container px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col-reverse justify-center items-center gap-x-16 gap-y-5 xl:gap-28 lg:flex-row lg:justify-between max-lg:max-w-2xl mx-auto max-w-full">
+    <section className="bg-gradient-to-r from-steel-blue to-gray-700 pb-20">
+      <div className="mx-auto container px-4 lg:px-8 rounded-xl">
+        <div>
+          <h2 className="text-xl bg-white text-midnight-green inline-block  p-5 rounded-b-xl font-semibold mb-10">
+            Perguntas Frequentes
+          </h2>
+        </div>
+        <div className="flex flex-col    max-lg:max-w-2xl mx-auto max-w-full">
           <div className="w-full lg:w-1/2">
             <div className="lg:max-w-xl">
               <div className="accordion-group">
@@ -51,13 +56,13 @@ export default function FAQ() {
                     className="accordion py-8 border-b border-solid border-gray-200"
                   >
                     <button
-                      className=" text-left accordion-toggle group inline-flex items-center justify-between text-xl font-normal leading-8 text-gray-white w-full  hover:text-blue-400"
+                      className=" text-left accordion-toggle group inline-flex items-center justify-between text-xl font-normal leading-8 text-gray-white w-full  hover:text-white"
                       aria-controls={`basic-collapse-${index}`}
                       onClick={() => toggleFAQ(index)}
                     >
                       <h5 className="text0white">{faq.question}</h5>
                       <svg
-                        className="text-gray-900  group-hover:text-steel-blue"
+                        className="text-white  group-hover:text-steel-blue"
                         width={22}
                         height={22}
                         viewBox="0 0 22 22"
