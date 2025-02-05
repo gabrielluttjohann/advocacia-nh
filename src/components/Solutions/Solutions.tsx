@@ -60,7 +60,7 @@ export default function Solutions() {
               </p>
               <Link
                 href={WHATSAPP_LINK}
-                className="inline-block mt-8 bg-steel-blue rounded-full py-3 px-5"
+                className="inline-block mt-8 bg-steel-blue font-semibold text-white rounded-full py-3 px-5"
               >
                 Fale Conosco
               </Link>

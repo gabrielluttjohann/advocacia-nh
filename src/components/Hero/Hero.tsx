@@ -40,7 +40,7 @@ export default function Hero() {
               </p>
               <Link
                 href={WHATSAPP_LINK}
-                className="inline-block mb-8 bg-steel-blue rounded-lg py-3 px-5 font-bold"
+                className="inline-block mb-8 bg-steel-blue text-white rounded-lg py-3 px-5 font-bold"
               >
                 Fale Conosco
               </Link>

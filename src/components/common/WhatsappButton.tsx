@@ -8,7 +8,7 @@ export default function WhatsappButton() {
       <Link href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
         <img
           src={whatsappImg.src}
-          className=" w-20 h-20 drop-shadow-lg"
+          className="w-12 h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 drop-shadow-lg"
           alt="WhatsApp"
         />
       </Link>

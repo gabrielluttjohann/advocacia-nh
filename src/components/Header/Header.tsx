@@ -24,7 +24,7 @@ export default function Header() {
             <div>
               <Link
                 href={WHATSAPP_LINK}
-                className="bg-green-500 hover:bg-green-400 transform transition duration-300 ease-in-out  p-4 rounded-full"
+                className="bg-green-500 font-semibold text-white hover:bg-green-400 transform transition duration-300 ease-in-out  p-4 rounded-full"
               >
                 Fale Conosco
               </Link>
