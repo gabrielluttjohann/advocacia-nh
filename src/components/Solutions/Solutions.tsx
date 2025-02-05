@@ -66,7 +66,7 @@ export default function Solutions() {
               </Link>
             </div>
           </div>
-          <div className="relative z-20 container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mb-48">
+          <div className="relative z-20 container mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 mb-48">
             {solutionsData.map((solution, index) => (
               <div key={index} className={`${solution.bgColor} text-white p-6`}>
                 <div className="m-8">
